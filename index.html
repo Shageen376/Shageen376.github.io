@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shageen Fathima S — Portfolio</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script defer src="assets/js/script.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile">
+        <!-- Initials avatar (no photo) -->
+        <div class="avatar">SF</div>
+        <h1 class="name">Shageen <span>Fathima S</span></h1>
+        <p class="role">Full Stack Developer</p>
+      </div>
+
+      <div class="contact">
+        <p><strong>Email:</strong><a href="mailto:shageenfathima02@gmail.com"> shageenfathima02@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91 9368393847</p>
+        <p><strong>Location:</strong> Coimbatore, Tamil Nadu</p>
+      </div>
+
+      <nav class="side-nav">
+        <a href="#home" class="active"><i class="dot"></i>Home</a>
+        <a href="#about"><i class="dot"></i>About</a>
+        <a href="#resume"><i class="dot"></i>Resume</a>
+        <a href="#projects"><i class="dot"></i>Projects</a>
+        <a href="#contact"><i class="dot"></i>Contact</a>
+      </nav>
+
+      <div class="socials">
+        <a href="https://github.com/Shageen376" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+      <div class="cv">
+        <a class="btn-download" href="Shageen Fathima S - FST(Resume).pdf" download>
+          ⬇ Download Resume
+        </a>
+      </div>
+
+      <p class="languages">Languages: Tamil • English • Hindi</p>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+      <section id="home" class="section hero">
+        <div class="hero-left">
+          <h2>Hello, I'm <span>Shageen</span></h2>
+          <h3>Full Stack Developer</h3>
+          <p>I build responsive web & mobile applications with React, Next.js, Node/Nest and modern databases. I deliver
+            user-focused, scalable solutions that solve real business problems.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn ghost">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="card glass">
+            <h4>Core Skills</h4>
+            <p>React.js • Next.js • React Native • Node.js • Nest.js • TypeScript • MongoDB • Postgres</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <h2>About</h2>
+        <div class="content two-col">
+          <div>
+            <p>I’m a Full Stack Developer experienced in React.js, Next.js, React Native, Node.js, Nest.js, MongoDB and
+              Postgres. I like developing applications with challenging features that bring value and profit to the
+              organization.</p>
+
+            <ul class="list">
+              <li>Responsive front-end with Next.js & Tailwind (UI-focused)</li>
+              <li>APIs and microservices with Node.js & Nest.js</li>
+              <li>Authentication (JWT, OAuth), Twilio OTP, Puppeteer integrations</li>
+              <li>DevOps basics: Nginx reverse proxy and deployments</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="card glass small">
+              <h4>Education</h4>
+              <p><strong>Government College of Technology</strong><br />B.Tech — CGPA 8.24 (2021–2025)</p>
+            </div>
+
+            <div class="card glass small">
+              <h4>Internship</h4>
+              <p><strong>RHInfos</strong><br />Full Stack Web & Mobile Developer (React Native, React.js, PHP, MySQL)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume" class="section">
+        <h2>Resume</h2>
+        <div class="content resume-grid">
+          <div class="job glass">
+            <h4>KrishTech Software Solutions</h4>
+            <p class="muted">Software Engineer (jan 2025 – Present)</p>
+            <ul>
+              <li>Developed responsive UIs with Next.js & Tailwind.</li>
+              <li>Built & managed APIs with Node.js and MongoDB; designed DB schemas.</li>
+              <li>Created microservices in Nest.js with Postgres; JWT & OAuth.</li>
+              <li>Integrated GST (IRIS), Google OAuth, Puppeteer, Twilio; handled Nginx deployment.</li>
+            </ul>
+          </div>
+
+          <div class="skills-card glass">
+            <h4>Skills</h4>
+            <div class="skill-tags">
+              <span>HTML</span><span>CSS/SCSS</span><span>JavaScript</span><span>TypeScript</span>
+              <span>React</span><span>Next.js</span><span>React Native</span><span>Node.js</span>
+              <span>Nest.js</span><span>MongoDB</span><span>Postgres</span><span>Nginx</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+
+        <div class="project-list">
+          <article class="project card glass">
+            <h4>ReNote — Quotation Management System</h4>
+            <p class="muted">Next.js • Tailwind • Express • MongoDB</p>
+            <p>Flexible quotation builder supporting product & service modes, GST handling and printable PDFs with ≈90%
+              on-screen-to-print accuracy.</p>
+            <div class="proj-links">
+              <a href="https://renote.krishub.in" target="_blank" rel="noopener">Live</a>
+              <a href="https://renote.krishub.in/auth" target="_blank" rel="noopener">Auth Service</a>
+            </div>
+          </article>
+
+          <article class="project card glass">
+            <h4>AuthService — Centralized Authentication</h4>
+            <p class="muted">Nest.js • Postgres • JWT • OAuth</p>
+            <p>Centralized auth service with registration, login, OTP flows, role-based access, Twilio OTP integration
+              and OAuth support.</p>
+            <div class="proj-links">
+              <a href="https://renote.krishub.in/auth" target="_blank" rel="noopener">Live / Docs</a>
+              <a href="https://github.com/Shageen376" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+        </div>
+
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="content two-col">
+          <div>
+            <p>If you like my work or have a project, let's talk — I'm available for full-time roles and freelance
+              projects.</p>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> <a href="mailto:shageenfathima02@gmail.com">shageenfathima02@gmail.com</a>
+              </li>
+              <li><strong>Phone:</strong> +91 9368393847</li>
+              <li><strong>Location:</strong> Coimbatore, Tamil Nadu</li>
+            </ul>
+            <div class="social-row">
+              <a href="https://github.com/Shageen376" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p>© 2025 — Shageen Fathima S</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
