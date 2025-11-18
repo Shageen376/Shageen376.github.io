@@ -330,4 +330,20 @@ html,body { height: 100%; font-family: 'Poppins', system-ui, -apple-system, 'Seg
     padding: 12px 6px;
   }
 }
+.mobile-resume {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-resume {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #4a6cf7;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+  }
+}
 
