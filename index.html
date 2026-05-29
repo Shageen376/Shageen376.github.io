@@ -2,185 +2,745 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Shageen Fathima S — Portfolio</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script defer src="assets/js/script.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, #dbeafe 0%, transparent 30%),
+        radial-gradient(circle at bottom right, #bfdbfe 0%, transparent 35%),
+        linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .glow::before {
+      content: "";
+
+      position: fixed;
+
+      width: 450px;
+      height: 450px;
+
+      top: -100px;
+      right: -100px;
+
+      background: rgba(37, 99, 235, 0.15);
+
+      filter: blur(120px);
+
+      z-index: -1;
+    }
+
+    .project-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(135deg,
+          rgba(37, 99, 235, 0.08),
+          transparent);
+
+      opacity: 0;
+
+      transition: 0.4s ease;
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+  </style>
 </head>
 
-<body>
-  <div class="wrapper">
+<body class="min-h-screen text-slate-900 glow">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="profile">
-        <!-- Initials avatar (no photo) -->
-        <div class="avatar">SF</div>
-        <h1 class="name">Shageen <span>Fathima S</span></h1>
-        <p class="role">Full Stack Developer</p>
-      </div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-10 py-8">
 
-      <div class="contact">
-        <p><strong>Email:</strong><a href="mailto:shageenfathima02@gmail.com"> shageenfathima02@gmail.com</a></p>
-        <p><strong>Phone:</strong> +91 9384793683</p>
-        <p><strong>Location:</strong> Coimbatore, Tamil Nadu</p>
-      </div>
+    <div class="flex flex-col lg:flex-row gap-8">
 
-      <nav class="side-nav">
-        <a href="#home" class="active"><i class="dot"></i>Home</a>
-        <a href="#about"><i class="dot"></i>About</a>
-        <a href="#resume"><i class="dot"></i>Resume</a>
-        <a href="#projects"><i class="dot"></i>Projects</a>
-        <a href="#contact"><i class="dot"></i>Contact</a>
-      </nav>
+      <!-- SIDEBAR -->
+      <aside
+        class="glass lg:sticky top-6 h-fit lg:w-[320px] rounded-[32px] p-8 transition duration-300 hover:-translate-y-1">
 
-      <div class="socials">
-        <a href="https://github.com/Shageen376" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+        <!-- Profile -->
+        <div class="flex flex-col">
 
-      <div class="cv">
-        <a class="btn-download" href="Shageen Fathima S - Resume(FSD).pdf" download>
-          ⬇ Download Resume
-        </a>
-      </div>
-
-      <p class="languages">Languages: Tamil • English • Hindi</p>
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main">
-      <section id="home" class="section hero">
-        <div class="hero-left">
-          <h2>Hello, I'm <span>Shageen</span></h2>
-          <h3>Full Stack Developer</h3>
-          <p>I build responsive web & mobile applications with React, Next.js, Node/Nest and modern databases. I deliver
-            user-focused, scalable solutions that solve real business problems.</p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn primary">View Projects</a>
-            <a href="#contact" class="btn ghost">Contact Me</a>
+          <div
+            class="w-28 h-28 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white text-4xl font-bold shadow-2xl shadow-blue-500/30 mb-5">
+            SF
           </div>
+
+          <h1 class="text-3xl font-bold leading-tight">
+            Shageen
+            <span class="block text-slate-500 text-base font-medium mt-1">
+              Fathima S
+            </span>
+          </h1>
+
+          <p class="mt-3 text-blue-600 font-semibold">
+            Full Stack Developer
+          </p>
+
         </div>
-        <div class="hero-right">
-          <div class="card glass">
-            <h4>Core Skills</h4>
-            <p>React.js • Next.js • React Native • Node.js • Nest.js • TypeScript • MongoDB • Postgres</p>
-          </div>
+
+        <!-- Contact -->
+        <div class="mt-8 space-y-3 text-sm text-slate-700">
+
+          <p>
+            <span class="font-semibold">Email:</span>
+            <a href="mailto:shageenfathima02@gmail.com" class="text-blue-600 hover:underline">
+              shageenfathima02@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <span class="font-semibold">Phone:</span>
+            +91 9384793683
+          </p>
+
+          <p>
+            <span class="font-semibold">Location:</span>
+            Coimbatore, Tamil Nadu
+          </p>
+
         </div>
-      </section>
 
-      <section id="about" class="section">
-        <h2>About</h2>
-        <div class="content two-col">
+        <!-- Navigation -->
+        <nav class="mt-8 flex flex-wrap lg:flex-col gap-3">
+
+          <a href="#home"
+            class="px-4 py-3 rounded-2xl bg-blue-100 text-blue-700 font-semibold hover:translate-x-1 transition">
+            Home
+          </a>
+
+          <a href="#about" class="px-4 py-3 rounded-2xl hover:bg-blue-50 font-semibold transition">
+            About
+          </a>
+
+          <a href="#resume" class="px-4 py-3 rounded-2xl hover:bg-blue-50 font-semibold transition">
+            Resume
+          </a>
+
+          <a href="#projects" class="px-4 py-3 rounded-2xl hover:bg-blue-50 font-semibold transition">
+            Projects
+          </a>
+
+          <a href="#contact" class="px-4 py-3 rounded-2xl hover:bg-blue-50 font-semibold transition">
+            Contact
+          </a>
+
+        </nav>
+
+        <!-- Social -->
+        <div class="mt-8 flex flex-wrap gap-3">
+
+          <a href="https://github.com/Shageen376" target="_blank"
+            class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-semibold hover:bg-blue-600 hover:text-white transition">
+            GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank"
+            class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-semibold hover:bg-blue-600 hover:text-white transition">
+            LinkedIn
+          </a>
+
+        </div>
+
+        <!-- Resume -->
+        <div class="mt-8">
+
+          <a href="Shageen-Fathima-S-Resume-FSD.pdf" download
+            class="block text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 rounded-2xl font-bold shadow-xl shadow-blue-500/20 hover:-translate-y-1 transition">
+
+            ⬇ Download Resume
+
+          </a>
+
+        </div>
+
+        <p class="mt-6 text-sm text-slate-500">
+          Languages: Tamil • English • Hindi
+        </p>
+
+      </aside>
+
+      <!-- MAIN -->
+      <main class="flex-1 space-y-8">
+
+        <!-- HERO -->
+        <section id="home" class="glass rounded-[32px] p-8 lg:p-12 grid lg:grid-cols-2 gap-10 items-center">
+
           <div>
-            <p>I’m a Full Stack Developer experienced in React.js, Next.js, React Native, Node.js, Nest.js, MongoDB and
-              Postgres. I like developing applications with challenging features that bring value and profit to the
-              organization.</p>
 
-            <ul class="list">
-              <li>Responsive front-end with Next.js & Tailwind (UI-focused)</li>
-              <li>APIs and microservices with Node.js & Nest.js</li>
-              <li>Authentication (JWT, OAuth), Twilio OTP, Puppeteer integrations</li>
-              <li>DevOps basics: Nginx reverse proxy and deployments</li>
-            </ul>
-          </div>
+            <h2 class="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight">
 
-          <div>
-            <div class="card glass small">
-              <h4>Education</h4>
-              <p><strong>Government College of Technology</strong><br />B.Tech — CGPA 8.24 (2021–2025)</p>
+              Hello,
+              I'm
+
+              <span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+
+                Shageen
+
+              </span>
+
+            </h2>
+
+            <h3 class="mt-5 text-2xl text-slate-500 font-semibold">
+              Full Stack Developer
+            </h3>
+
+            <p class="mt-6 text-slate-700 leading-8 text-lg">
+
+              I build responsive web & mobile applications with React, Next.js,
+              Node/Nest and modern databases. I deliver user-focused,
+              scalable solutions that solve real business problems.
+
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+
+              <a href="#projects"
+                class="px-7 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold shadow-xl shadow-blue-500/30 hover:-translate-y-1 transition">
+
+                View Projects
+
+              </a>
+
+              <a href="#contact"
+                class="px-7 py-4 rounded-2xl border border-blue-100 bg-white/70 text-blue-600 font-bold hover:-translate-y-1 transition">
+
+                Contact Me
+
+              </a>
+
             </div>
 
-            <div class="card glass small">
-              <h4>Internship</h4>
-              <p><strong>RHInfos</strong><br />Full Stack Web & Mobile Developer (React Native, React.js, PHP, MySQL)
+          </div>
+
+          <div>
+
+            <div class="glass rounded-[28px] p-8 animate-pulse">
+
+              <h4 class="text-2xl font-bold mb-4">
+                Core Skills
+              </h4>
+
+              <p class="text-slate-700 leading-8">
+
+                React.js • Next.js • React Native • Node.js • Nest.js •
+                TypeScript • MongoDB • Postgres
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+
+          <h2 class="text-3xl font-bold mb-8">
+            About
+          </h2>
+
+          <div class="grid lg:grid-cols-[1fr_360px] gap-8">
+
+            <div class="glass rounded-[28px] p-8">
+
+              <p class="text-slate-700 leading-8">
+
+                I’m a Full Stack Developer experienced in React.js, Next.js,
+                React Native, Node.js, Nest.js, MongoDB and Postgres.
+                I enjoy building scalable applications with modern UI/UX
+                and solving real-world business problems.
+
+              </p>
+
+              <ul class="mt-6 space-y-4 text-slate-700">
+
+                <li>
+                  • Responsive front-end with Next.js & Tailwind
+                </li>
+
+                <li>
+                  • APIs and microservices with Node.js & Nest.js
+                </li>
+
+                <li>
+                  • Authentication (JWT, OAuth), Twilio OTP integrations
+                </li>
+
+                <li>
+                  • DevOps basics: Nginx reverse proxy & deployment
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="space-y-6">
+
+              <div class="glass rounded-[28px] p-8">
+
+                <h4 class="text-xl font-bold mb-3">
+                  Education
+                </h4>
+
+                <p class="leading-7 text-slate-700">
+
+                  <strong>Government College of Technology</strong>
+                  <br>
+
+                  B.Tech — CGPA 8.24 (2021–2025)
+
+                </p>
+
+              </div>
+
+              <div class="glass rounded-[28px] p-8">
+
+                <h4 class="text-xl font-bold mb-3">
+                  Internship
+                </h4>
+
+                <p class="leading-7 text-slate-700">
+
+                  <strong>RHInfos</strong>
+                  <br>
+
+                  Full Stack Web & Mobile Developer
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- RESUME -->
+        <section id="resume">
+
+          <h2 class="text-3xl font-bold mb-8">
+            Work Experience
+          </h2>
+
+          <div class="space-y-8">
+
+            <!-- EXPERIENCE CARD -->
+            <div class="glass rounded-[30px] p-8">
+
+              <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+
+                <div>
+                  <h3 class="text-2xl font-bold text-slate-900">
+                    KrishTech Software Solutions
+                  </h3>
+
+                  <p class="text-blue-600 font-semibold mt-1">
+                    Full Stack Web Developer
+                  </p>
+                </div>
+
+                <p class="text-slate-500 font-medium">
+                  May 2024 – Present
+                </p>
+
+              </div>
+
+              <div class="mt-8 space-y-4 text-slate-700 leading-8">
+
+                <p>
+                  • Developed responsive Front-End UI interfaces using
+                  <strong>Next.js</strong> and
+                  <strong>Tailwind CSS</strong>.
+                </p>
+
+                <p>
+                  • Built and managed scalable
+                  <strong>Node.js APIs</strong> integrated with
+                  <strong>MongoDB</strong>.
+                </p>
+
+                <p>
+                  • Created
+                  <strong>Microservices using Nest.js and PostgreSQL</strong>
+                  with secure architecture.
+                </p>
+
+                <p>
+                  • Implemented
+                  <strong>JWT authentication</strong>,
+                  <strong>role-based access control</strong>,
+                  and protected routing.
+                </p>
+
+                <p>
+                  • Integrated
+                  <strong>GST APIs</strong>,
+                  <strong>Google OAuth</strong>,
+                  <strong>Puppeteer</strong>,
+                  <strong>Twilio OTP</strong>,
+                  and payment gateways.
+                </p>
+
+                <p>
+                  • Worked with
+                  <strong>OpenAI integrations</strong>
+                  for automated CSV/Excel document generation.
+                </p>
+
+                <p>
+                  • Managed
+                  <strong>Nginx configuration</strong>,
+                  deployment setup,
+                  and reverse proxy handling.
+                </p>
+
+                <p>
+                  • Handled complete
+                  <strong>Frontend, Backend, and Database</strong>
+                  development workflows.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+        <!-- SKILLS -->
+        <section id="skills">
+
+          <h2 class="text-3xl font-bold mb-8">
+            Technical Skills
+          </h2>
+
+          <div class="glass rounded-[30px] p-8">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              <div>
+                <h4 class="font-bold text-lg mb-3 text-blue-600">
+                  Frontend
+                </h4>
+
+                <div class="flex flex-wrap gap-3">
+                  <span class="skill">HTML</span>
+                  <span class="skill">CSS</span>
+                  <span class="skill">SCSS</span>
+                  <span class="skill">JavaScript</span>
+                  <span class="skill">TypeScript</span>
+                  <span class="skill">React.js</span>
+                  <span class="skill">Next.js</span>
+                  <span class="skill">Tailwind CSS</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-lg mb-3 text-blue-600">
+                  Backend
+                </h4>
+
+                <div class="flex flex-wrap gap-3">
+                  <span class="skill">Node.js</span>
+                  <span class="skill">Nest.js</span>
+                  <span class="skill">JWT</span>
+                  <span class="skill">OAuth</span>
+                  <span class="skill">REST APIs</span>
+                  <span class="skill">Microservices</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-lg mb-3 text-blue-600">
+                  Database & Tools
+                </h4>
+
+                <div class="flex flex-wrap gap-3">
+                  <span class="skill">MongoDB</span>
+                  <span class="skill">PostgreSQL</span>
+                  <span class="skill">Git</span>
+                  <span class="skill">GitHub</span>
+                  <span class="skill">Nginx</span>
+                  <span class="skill">VS Code</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+        <!-- PROJECTS -->
+        <section id="projects">
+
+          <h2 class="text-3xl font-bold mb-8">
+            Projects
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Reveal Project -->
+            <article
+              class="project-card glass rounded-[28px] p-8 relative overflow-hidden hover:-translate-y-2 transition">
+
+              <div class="flex items-start justify-between gap-4 flex-wrap">
+
+                <div>
+                  <h4 class="text-2xl font-bold">
+                    Reveal
+                  </h4>
+
+                  <p class="mt-2 text-blue-600 font-semibold">
+                    Next.js • Tailwind CSS • Node.js • MongoDB • Flutter • Bluetooth
+                  </p>
+                </div>
+
+                <span class="text-sm text-slate-500 font-medium">
+                  Dec 2025 – Present
+                </span>
+
+              </div>
+
+              <p class="mt-5 text-slate-700 leading-8">
+
+                RFID Scanner based Production Management Application
+                focused on shipment tracking, RFID count monitoring,
+                production workflows, and role-based system management.
+
+              </p>
+
+              <div class="mt-6 flex gap-3 flex-wrap">
+
+                <a href="https://reveal.krishub.in" target="_blank"
+                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
+
+                  Live
+
+                </a>
+
+              </div>
+
+            </article>
+            <!-- Project -->
+            <article
+              class="project-card glass rounded-[28px] p-8 relative overflow-hidden hover:-translate-y-2 transition">
+
+              <h4 class="text-2xl font-bold">
+                ReNote
+              </h4>
+
+              <p class="mt-2 text-blue-600 font-semibold">
+                Next.js • Tailwind • MongoDB
+              </p>
+
+              <p class="mt-5 text-slate-700 leading-8">
+
+                Flexible quotation builder supporting GST handling,
+                product/service modes and printable PDFs.
+
+              </p>
+
+              <div class="mt-6 flex gap-3">
+
+                <a href="https://renote.krishub.in" target="_blank"
+                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
+
+                  Live
+
+                </a>
+
+                <a href="https://renote.krishub.in/auth" target="_blank"
+                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
+
+                  Auth
+
+                </a>
+
+              </div>
+
+            </article>
+
+            <!-- Project -->
+            <article
+              class="project-card glass rounded-[28px] p-8 relative overflow-hidden hover:-translate-y-2 transition">
+
+              <h4 class="text-2xl font-bold">
+                AuthService
+              </h4>
+
+              <p class="mt-2 text-blue-600 font-semibold">
+                Nest.js • JWT • OAuth
+              </p>
+
+              <p class="mt-5 text-slate-700 leading-8">
+
+                Centralized authentication service with OTP,
+                role-based access and OAuth integrations.
+
+              </p>
+
+              <div class="mt-6 flex gap-3">
+
+                <a href="https://renote.krishub.in/auth" target="_blank"
+                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
+
+                  Live
+
+                </a>
+
+                <a href="https://github.com/Shageen376" target="_blank"
+                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
+
+                  GitHub
+
+                </a>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+        <!-- CERTIFICATIONS -->
+        <section id="certifications">
+
+          <h2 class="text-3xl font-bold mb-8">
+            Certifications
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+
+            <div class="glass rounded-[28px] p-8">
+              <h4 class="text-xl font-bold">
+                RHInfos Internship Certification
+              </h4>
+
+              <p class="mt-4 text-slate-700 leading-7">
+                Completed intensive Full Stack Web & Mobile Development training
+                using React.js, React Native, and XAMPP.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="resume" class="section">
-        <h2>Resume</h2>
-        <div class="content resume-grid">
-          <div class="job glass">
-            <h4>KrishTech Software Solutions</h4>
-            <p class="muted">Software Engineer (jan 2024 – Present)</p>
-            <ul>
-              <li>Developed responsive UIs with Next.js & Tailwind.</li>
-              <li>Built & managed APIs with Node.js and MongoDB; designed DB schemas.</li>
-              <li>Created microservices in Nest.js with Postgres; JWT & OAuth.</li>
-              <li>Integrated GST (IRIS), Google OAuth, Puppeteer, Twilio; handled Nginx deployment.</li>
-            </ul>
+            <div class="glass rounded-[28px] p-8">
+              <h4 class="text-xl font-bold">
+                NCC 'B' & 'C' Certificate
+              </h4>
+
+              <p class="mt-4 text-slate-700 leading-7">
+                Completed 3 years of NCC training focused on leadership,
+                discipline, drills, map reading, and military training activities.
+              </p>
+            </div>
+
           </div>
 
-          <div class="skills-card glass">
-            <h4>Skills</h4>
-            <div class="skill-tags">
-              <span>HTML</span><span>CSS/SCSS</span><span>JavaScript</span><span>TypeScript</span>
-              <span>React</span><span>Next.js</span><span>React Native</span><span>Node.js</span>
-              <span>Nest.js</span><span>MongoDB</span><span>Postgres</span><span>Nginx</span>
+        </section>
+        <!-- CONTACT -->
+        <section id="contact">
+
+          <div class="glass rounded-[32px] p-8 lg:p-12">
+
+            <h2 class="text-4xl font-bold">
+              Contact Me
+            </h2>
+
+            <p class="mt-5 text-slate-700 leading-8 text-lg">
+
+              If you like my work or have a project,
+              let's connect.
+
+            </p>
+
+            <div class="mt-8 space-y-4 text-slate-700">
+
+              <p>
+                <strong>Email:</strong>
+                shageenfathima02@gmail.com
+              </p>
+
+              <p>
+                <strong>Phone:</strong>
+                +91 9384793683
+              </p>
+
+              <p>
+                <strong>Location:</strong>
+                Coimbatore, Tamil Nadu
+              </p>
+
             </div>
+
+            <div class="mt-8 flex gap-4 flex-wrap">
+
+              <a href="https://github.com/Shageen376" target="_blank"
+                class="px-5 py-3 rounded-2xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
+
+                GitHub
+
+              </a>
+
+              <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank"
+                class="px-5 py-3 rounded-2xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
+
+                LinkedIn
+
+              </a>
+
+            </div>
+
           </div>
-        </div>
-      </section>
 
-      <section id="projects" class="section">
-        <h2>Projects</h2>
+        </section>
 
-        <div class="project-list">
-          <article class="project card glass">
-            <h4>ReNote — Quotation Management System</h4>
-            <p class="muted">Next.js • Tailwind • Express • MongoDB</p>
-            <p>Flexible quotation builder supporting product & service modes, GST handling and printable PDFs with ≈90%
-              on-screen-to-print accuracy.</p>
-            <div class="proj-links">
-              <a href="https://renote.krishub.in" target="_blank" rel="noopener">Live</a>
-              <a href="https://renote.krishub.in/auth" target="_blank" rel="noopener">Auth Service</a>
-            </div>
-          </article>
+        <!-- FOOTER -->
+        <footer class="py-8 text-center text-slate-500">
 
-          <article class="project card glass">
-            <h4>AuthService — Centralized Authentication</h4>
-            <p class="muted">Nest.js • Postgres • JWT • OAuth</p>
-            <p>Centralized auth service with registration, login, OTP flows, role-based access, Twilio OTP integration
-              and OAuth support.</p>
-            <div class="proj-links">
-              <a href="https://renote.krishub.in/auth" target="_blank" rel="noopener">Live / Docs</a>
-              <a href="https://github.com/Shageen376" target="_blank" rel="noopener">GitHub</a>
-            </div>
-          </article>
-        </div>
+          © 2026 — Shageen Fathima S
 
-      </section>
+        </footer>
 
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <div class="content two-col">
-          <div>
-            <p>If you like my work or have a project, let's talk — I'm available for full-time roles and freelance
-              projects.</p>
-            <ul class="contact-list">
-              <li><strong>Email:</strong> <a href="mailto:shageenfathima02@gmail.com">shageenfathima02@gmail.com</a>
-              </li>
-              <li><strong>Phone:</strong> +91 9384793683</li>
-              <li><strong>Location:</strong> Coimbatore, Tamil Nadu</li>
-            </ul>
-            <div class="social-row">
-              <a href="https://github.com/Shageen376" target="_blank">GitHub</a>
-              <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank">LinkedIn</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <p>© 2025 — Shageen Fathima S</p>
-      </footer>
-    </main>
+      </main>
+
+    </div>
+
   </div>
+
 </body>
+
 </html>
