@@ -2,745 +2,689 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shageen Fathima S — Portfolio</title>
 
-  <title>Shageen Fathima S — Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-  <style>
-    * {
-      font-family: 'Poppins', sans-serif;
-    }
+        /* Custom Scrollbar for Sidebar */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-    body {
-      background:
-        radial-gradient(circle at top left, #dbeafe 0%, transparent 30%),
-        radial-gradient(circle at bottom right, #bfdbfe 0%, transparent 35%),
-        linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
-    }
+        /* Typwriter animation for hero */
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #F7A02D;
+            animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+        }
 
-    .glass {
-      background: rgba(255, 255, 255, 0.55);
-      backdrop-filter: blur(18px);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.05);
-    }
+        @keyframes typing {
+            from {
+                width: 0
+            }
 
-    .glow::before {
-      content: "";
+            to {
+                width: 100%
+            }
+        }
 
-      position: fixed;
+        @keyframes blink-caret {
 
-      width: 450px;
-      height: 450px;
+            from,
+            to {
+                border-color: transparent
+            }
 
-      top: -100px;
-      right: -100px;
+            50% {
+                border-color: #F7A02D;
+            }
+        }
 
-      background: rgba(37, 99, 235, 0.15);
-
-      filter: blur(120px);
-
-      z-index: -1;
-    }
-
-    .project-card::before {
-      content: "";
-
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(135deg,
-          rgba(37, 99, 235, 0.08),
-          transparent);
-
-      opacity: 0;
-
-      transition: 0.4s ease;
-    }
-
-    .project-card:hover::before {
-      opacity: 1;
-    }
-  </style>
+        /* Section Headings Style */
+        .section-title {
+            color: #F7A02D;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 
-<body class="min-h-screen text-slate-900 glow">
+<body class="bg-[#060f18] text-[#acacac] selection:bg-[#F7A02D] selection:text-white">
 
-  <div class="max-w-7xl mx-auto px-5 lg:px-10 py-8">
-
-    <div class="flex flex-col lg:flex-row gap-8">
-
-      <!-- SIDEBAR -->
-      <aside
-        class="glass lg:sticky top-6 h-fit lg:w-[320px] rounded-[32px] p-8 transition duration-300 hover:-translate-y-1">
-
-        <!-- Profile -->
-        <div class="flex flex-col">
-
-          <div
-            class="w-28 h-28 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white text-4xl font-bold shadow-2xl shadow-blue-500/30 mb-5">
-            SF
-          </div>
-
-          <h1 class="text-3xl font-bold leading-tight">
-            Shageen
-            <span class="block text-slate-500 text-base font-medium mt-1">
-              Fathima S
-            </span>
-          </h1>
-
-          <p class="mt-3 text-blue-600 font-semibold">
-            Full Stack Developer
-          </p>
-
+    <!-- Mobile Hamburger -->
+    <div
+        class="lg:hidden bg-[#091523] p-4 flex justify-between items-center sticky top-0 z-50 border-b border-[#182333]">
+        <div class="flex items-center gap-3">
+            <img src="Shageen.png" alt="Shageen Fathima S"
+                class="w-8 h-8 rounded-full border border-[#F7A02D] object-cover">
+            <span class="text-[#F2F2F2] font-bold text-[13px]">Shageen Fathima</span>
         </div>
-
-        <!-- Contact -->
-        <div class="mt-8 space-y-3 text-sm text-slate-700">
-
-          <p>
-            <span class="font-semibold">Email:</span>
-            <a href="mailto:shageenfathima02@gmail.com" class="text-blue-600 hover:underline">
-              shageenfathima02@gmail.com
-            </a>
-          </p>
-
-          <p>
-            <span class="font-semibold">Phone:</span>
-            +91 9384793683
-          </p>
-
-          <p>
-            <span class="font-semibold">Location:</span>
-            Coimbatore, Tamil Nadu
-          </p>
-
-        </div>
-
-        <!-- Navigation -->
-        <nav class="mt-8 flex flex-wrap lg:flex-col gap-3">
-
-          <a href="#home"
-            class="px-4 py-3 rounded-2xl bg-blue-100 text-blue-700 font-semibold hover:translate-x-1 transition">
-            Home
-          </a>
-
-          <a href="#about" class="px-4 py-3 rounded-2xl hover:bg-blue-50 font-semibold transition">
-            About
-          </a>
-
-          <a href="#resume" class="px-4 py-3 rounded-2xl hover:bg-blue-50 font-semibold transition">
-            Resume
-          </a>
-
-          <a href="#projects" class="px-4 py-3 rounded-2xl hover:bg-blue-50 font-semibold transition">
-            Projects
-          </a>
-
-          <a href="#contact" class="px-4 py-3 rounded-2xl hover:bg-blue-50 font-semibold transition">
-            Contact
-          </a>
-
-        </nav>
-
-        <!-- Social -->
-        <div class="mt-8 flex flex-wrap gap-3">
-
-          <a href="https://github.com/Shageen376" target="_blank"
-            class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-semibold hover:bg-blue-600 hover:text-white transition">
-            GitHub
-          </a>
-
-          <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank"
-            class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-semibold hover:bg-blue-600 hover:text-white transition">
-            LinkedIn
-          </a>
-
-        </div>
-
-        <!-- Resume -->
-        <div class="mt-8">
-
-          <a href="Shageen-Fathima-S-Resume-FSD.pdf" download
-            class="block text-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 rounded-2xl font-bold shadow-xl shadow-blue-500/20 hover:-translate-y-1 transition">
-
-            ⬇ Download Resume
-
-          </a>
-
-        </div>
-
-        <p class="mt-6 text-sm text-slate-500">
-          Languages: Tamil • English • Hindi
-        </p>
-
-      </aside>
-
-      <!-- MAIN -->
-      <main class="flex-1 space-y-8">
-
-        <!-- HERO -->
-        <section id="home" class="glass rounded-[32px] p-8 lg:p-12 grid lg:grid-cols-2 gap-10 items-center">
-
-          <div>
-
-            <h2 class="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight">
-
-              Hello,
-              I'm
-
-              <span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-
-                Shageen
-
-              </span>
-
-            </h2>
-
-            <h3 class="mt-5 text-2xl text-slate-500 font-semibold">
-              Full Stack Developer
-            </h3>
-
-            <p class="mt-6 text-slate-700 leading-8 text-lg">
-
-              I build responsive web & mobile applications with React, Next.js,
-              Node/Nest and modern databases. I deliver user-focused,
-              scalable solutions that solve real business problems.
-
-            </p>
-
-            <div class="mt-8 flex flex-wrap gap-4">
-
-              <a href="#projects"
-                class="px-7 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold shadow-xl shadow-blue-500/30 hover:-translate-y-1 transition">
-
-                View Projects
-
-              </a>
-
-              <a href="#contact"
-                class="px-7 py-4 rounded-2xl border border-blue-100 bg-white/70 text-blue-600 font-bold hover:-translate-y-1 transition">
-
-                Contact Me
-
-              </a>
-
-            </div>
-
-          </div>
-
-          <div>
-
-            <div class="glass rounded-[28px] p-8 animate-pulse">
-
-              <h4 class="text-2xl font-bold mb-4">
-                Core Skills
-              </h4>
-
-              <p class="text-slate-700 leading-8">
-
-                React.js • Next.js • React Native • Node.js • Nest.js •
-                TypeScript • MongoDB • Postgres
-
-              </p>
-
-            </div>
-
-          </div>
-
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about">
-
-          <h2 class="text-3xl font-bold mb-8">
-            About
-          </h2>
-
-          <div class="grid lg:grid-cols-[1fr_360px] gap-8">
-
-            <div class="glass rounded-[28px] p-8">
-
-              <p class="text-slate-700 leading-8">
-
-                I’m a Full Stack Developer experienced in React.js, Next.js,
-                React Native, Node.js, Nest.js, MongoDB and Postgres.
-                I enjoy building scalable applications with modern UI/UX
-                and solving real-world business problems.
-
-              </p>
-
-              <ul class="mt-6 space-y-4 text-slate-700">
-
-                <li>
-                  • Responsive front-end with Next.js & Tailwind
-                </li>
-
-                <li>
-                  • APIs and microservices with Node.js & Nest.js
-                </li>
-
-                <li>
-                  • Authentication (JWT, OAuth), Twilio OTP integrations
-                </li>
-
-                <li>
-                  • DevOps basics: Nginx reverse proxy & deployment
-                </li>
-
-              </ul>
-
-            </div>
-
-            <div class="space-y-6">
-
-              <div class="glass rounded-[28px] p-8">
-
-                <h4 class="text-xl font-bold mb-3">
-                  Education
-                </h4>
-
-                <p class="leading-7 text-slate-700">
-
-                  <strong>Government College of Technology</strong>
-                  <br>
-
-                  B.Tech — CGPA 8.24 (2021–2025)
-
-                </p>
-
-              </div>
-
-              <div class="glass rounded-[28px] p-8">
-
-                <h4 class="text-xl font-bold mb-3">
-                  Internship
-                </h4>
-
-                <p class="leading-7 text-slate-700">
-
-                  <strong>RHInfos</strong>
-                  <br>
-
-                  Full Stack Web & Mobile Developer
-
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </section>
-
-        <!-- RESUME -->
-        <section id="resume">
-
-          <h2 class="text-3xl font-bold mb-8">
-            Work Experience
-          </h2>
-
-          <div class="space-y-8">
-
-            <!-- EXPERIENCE CARD -->
-            <div class="glass rounded-[30px] p-8">
-
-              <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-
-                <div>
-                  <h3 class="text-2xl font-bold text-slate-900">
-                    KrishTech Software Solutions
-                  </h3>
-
-                  <p class="text-blue-600 font-semibold mt-1">
-                    Full Stack Web Developer
-                  </p>
-                </div>
-
-                <p class="text-slate-500 font-medium">
-                  May 2024 – Present
-                </p>
-
-              </div>
-
-              <div class="mt-8 space-y-4 text-slate-700 leading-8">
-
-                <p>
-                  • Developed responsive Front-End UI interfaces using
-                  <strong>Next.js</strong> and
-                  <strong>Tailwind CSS</strong>.
-                </p>
-
-                <p>
-                  • Built and managed scalable
-                  <strong>Node.js APIs</strong> integrated with
-                  <strong>MongoDB</strong>.
-                </p>
-
-                <p>
-                  • Created
-                  <strong>Microservices using Nest.js and PostgreSQL</strong>
-                  with secure architecture.
-                </p>
-
-                <p>
-                  • Implemented
-                  <strong>JWT authentication</strong>,
-                  <strong>role-based access control</strong>,
-                  and protected routing.
-                </p>
-
-                <p>
-                  • Integrated
-                  <strong>GST APIs</strong>,
-                  <strong>Google OAuth</strong>,
-                  <strong>Puppeteer</strong>,
-                  <strong>Twilio OTP</strong>,
-                  and payment gateways.
-                </p>
-
-                <p>
-                  • Worked with
-                  <strong>OpenAI integrations</strong>
-                  for automated CSV/Excel document generation.
-                </p>
-
-                <p>
-                  • Managed
-                  <strong>Nginx configuration</strong>,
-                  deployment setup,
-                  and reverse proxy handling.
-                </p>
-
-                <p>
-                  • Handled complete
-                  <strong>Frontend, Backend, and Database</strong>
-                  development workflows.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </section>
-        <!-- SKILLS -->
-        <section id="skills">
-
-          <h2 class="text-3xl font-bold mb-8">
-            Technical Skills
-          </h2>
-
-          <div class="glass rounded-[30px] p-8">
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-              <div>
-                <h4 class="font-bold text-lg mb-3 text-blue-600">
-                  Frontend
-                </h4>
-
-                <div class="flex flex-wrap gap-3">
-                  <span class="skill">HTML</span>
-                  <span class="skill">CSS</span>
-                  <span class="skill">SCSS</span>
-                  <span class="skill">JavaScript</span>
-                  <span class="skill">TypeScript</span>
-                  <span class="skill">React.js</span>
-                  <span class="skill">Next.js</span>
-                  <span class="skill">Tailwind CSS</span>
-                </div>
-              </div>
-
-              <div>
-                <h4 class="font-bold text-lg mb-3 text-blue-600">
-                  Backend
-                </h4>
-
-                <div class="flex flex-wrap gap-3">
-                  <span class="skill">Node.js</span>
-                  <span class="skill">Nest.js</span>
-                  <span class="skill">JWT</span>
-                  <span class="skill">OAuth</span>
-                  <span class="skill">REST APIs</span>
-                  <span class="skill">Microservices</span>
-                </div>
-              </div>
-
-              <div>
-                <h4 class="font-bold text-lg mb-3 text-blue-600">
-                  Database & Tools
-                </h4>
-
-                <div class="flex flex-wrap gap-3">
-                  <span class="skill">MongoDB</span>
-                  <span class="skill">PostgreSQL</span>
-                  <span class="skill">Git</span>
-                  <span class="skill">GitHub</span>
-                  <span class="skill">Nginx</span>
-                  <span class="skill">VS Code</span>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </section>
-        <!-- PROJECTS -->
-        <section id="projects">
-
-          <h2 class="text-3xl font-bold mb-8">
-            Projects
-          </h2>
-
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- Reveal Project -->
-            <article
-              class="project-card glass rounded-[28px] p-8 relative overflow-hidden hover:-translate-y-2 transition">
-
-              <div class="flex items-start justify-between gap-4 flex-wrap">
-
-                <div>
-                  <h4 class="text-2xl font-bold">
-                    Reveal
-                  </h4>
-
-                  <p class="mt-2 text-blue-600 font-semibold">
-                    Next.js • Tailwind CSS • Node.js • MongoDB • Flutter • Bluetooth
-                  </p>
-                </div>
-
-                <span class="text-sm text-slate-500 font-medium">
-                  Dec 2025 – Present
-                </span>
-
-              </div>
-
-              <p class="mt-5 text-slate-700 leading-8">
-
-                RFID Scanner based Production Management Application
-                focused on shipment tracking, RFID count monitoring,
-                production workflows, and role-based system management.
-
-              </p>
-
-              <div class="mt-6 flex gap-3 flex-wrap">
-
-                <a href="https://reveal.krishub.in" target="_blank"
-                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
-
-                  Live
-
-                </a>
-
-              </div>
-
-            </article>
-            <!-- Project -->
-            <article
-              class="project-card glass rounded-[28px] p-8 relative overflow-hidden hover:-translate-y-2 transition">
-
-              <h4 class="text-2xl font-bold">
-                ReNote
-              </h4>
-
-              <p class="mt-2 text-blue-600 font-semibold">
-                Next.js • Tailwind • MongoDB
-              </p>
-
-              <p class="mt-5 text-slate-700 leading-8">
-
-                Flexible quotation builder supporting GST handling,
-                product/service modes and printable PDFs.
-
-              </p>
-
-              <div class="mt-6 flex gap-3">
-
-                <a href="https://renote.krishub.in" target="_blank"
-                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
-
-                  Live
-
-                </a>
-
-                <a href="https://renote.krishub.in/auth" target="_blank"
-                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
-
-                  Auth
-
-                </a>
-
-              </div>
-
-            </article>
-
-            <!-- Project -->
-            <article
-              class="project-card glass rounded-[28px] p-8 relative overflow-hidden hover:-translate-y-2 transition">
-
-              <h4 class="text-2xl font-bold">
-                AuthService
-              </h4>
-
-              <p class="mt-2 text-blue-600 font-semibold">
-                Nest.js • JWT • OAuth
-              </p>
-
-              <p class="mt-5 text-slate-700 leading-8">
-
-                Centralized authentication service with OTP,
-                role-based access and OAuth integrations.
-
-              </p>
-
-              <div class="mt-6 flex gap-3">
-
-                <a href="https://renote.krishub.in/auth" target="_blank"
-                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
-
-                  Live
-
-                </a>
-
-                <a href="https://github.com/Shageen376" target="_blank"
-                  class="px-4 py-2 rounded-xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
-
-                  GitHub
-
-                </a>
-
-              </div>
-
-            </article>
-
-          </div>
-
-        </section>
-        <!-- CERTIFICATIONS -->
-        <section id="certifications">
-
-          <h2 class="text-3xl font-bold mb-8">
-            Certifications
-          </h2>
-
-          <div class="grid md:grid-cols-2 gap-8">
-
-            <div class="glass rounded-[28px] p-8">
-              <h4 class="text-xl font-bold">
-                RHInfos Internship Certification
-              </h4>
-
-              <p class="mt-4 text-slate-700 leading-7">
-                Completed intensive Full Stack Web & Mobile Development training
-                using React.js, React Native, and XAMPP.
-              </p>
-            </div>
-
-            <div class="glass rounded-[28px] p-8">
-              <h4 class="text-xl font-bold">
-                NCC 'B' & 'C' Certificate
-              </h4>
-
-              <p class="mt-4 text-slate-700 leading-7">
-                Completed 3 years of NCC training focused on leadership,
-                discipline, drills, map reading, and military training activities.
-              </p>
-            </div>
-
-          </div>
-
-        </section>
-        <!-- CONTACT -->
-        <section id="contact">
-
-          <div class="glass rounded-[32px] p-8 lg:p-12">
-
-            <h2 class="text-4xl font-bold">
-              Contact Me
-            </h2>
-
-            <p class="mt-5 text-slate-700 leading-8 text-lg">
-
-              If you like my work or have a project,
-              let's connect.
-
-            </p>
-
-            <div class="mt-8 space-y-4 text-slate-700">
-
-              <p>
-                <strong>Email:</strong>
-                shageenfathima02@gmail.com
-              </p>
-
-              <p>
-                <strong>Phone:</strong>
-                +91 9384793683
-              </p>
-
-              <p>
-                <strong>Location:</strong>
-                Coimbatore, Tamil Nadu
-              </p>
-
-            </div>
-
-            <div class="mt-8 flex gap-4 flex-wrap">
-
-              <a href="https://github.com/Shageen376" target="_blank"
-                class="px-5 py-3 rounded-2xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
-
-                GitHub
-
-              </a>
-
-              <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank"
-                class="px-5 py-3 rounded-2xl bg-blue-100 text-blue-700 font-bold hover:bg-blue-600 hover:text-white transition">
-
-                LinkedIn
-
-              </a>
-
-            </div>
-
-          </div>
-
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="py-8 text-center text-slate-500">
-
-          © 2026 — Shageen Fathima S
-
-        </footer>
-
-      </main>
-
+        <button id="mobile-menu-btn" class="text-[#F2F2F2] text-lg"><i class="fas fa-bars"></i></button>
     </div>
 
-  </div>
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-nav"
+        class="fixed inset-0 bg-[#060f18]/95 z-40 hidden flex-col items-center justify-center gap-6 text-lg">
+        <a href="#home" class="mobile-link hover:text-[#F7A02D] transition">Home</a>
+        <a href="#about" class="mobile-link hover:text-[#F7A02D] transition">About</a>
+        <a href="#resume" class="mobile-link hover:text-[#F7A02D] transition">Experience</a>
+        <a href="#skills" class="mobile-link hover:text-[#F7A02D] transition">Skills</a>
+        <a href="#projects" class="mobile-link hover:text-[#F7A02D] transition">Projects</a>
+        <a href="#certifications" class="mobile-link hover:text-[#F7A02D] transition">Certifications</a>
+        <a href="#contact" class="mobile-link hover:text-[#F7A02D] transition">Contact</a>
+    </div>
 
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 py-6 flex flex-col lg:flex-row gap-6 relative min-h-screen">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside
+            class="hidden lg:block w-[300px] shrink-0 bg-[#091523] h-[calc(100vh-3rem)] sticky top-6 overflow-y-auto scrollbar-hide rounded-xl border border-[#182333]">
+
+            <!-- Profile -->
+            <div class="bg-[#182333] p-6 text-center border-b border-[#060f18]">
+                <img src="Shageen.png" alt="Shageen Fathima S"
+                    class="w-20 h-20 mx-auto rounded-full border-[2px] border-[#F7A02D] object-cover mb-4 shadow-[0_0_15px_rgba(247,160,45,0.3)]">
+                <h4 class="text-lg font-bold text-[#F2F2F2]">Shageen <span class="text-[#F7A02D]">Fathima S</span></h4>
+                <p class="text-[13px] mt-1 font-medium text-[#acacac]">Full-Stack Engineer</p>
+                <p class="text-[10px] mt-1 text-[#acacac]/70">Python/FastAPI | Node.js/NestJS</p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center gap-4 py-5 text-lg text-[#F7A02D]">
+                <a href="https://github.com/Shageen376" target="_blank"
+                    class="hover:text-white transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank"
+                    class="hover:text-white transition transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <!-- Other Details -->
+            <div class="px-5 py-4 border-y border-[#182333] text-[12px]">
+                <div class="flex justify-between py-1.5"><span class="text-[#F2F2F2] font-semibold">Location:</span>
+                    <span class="text-right text-[#acacac]">Coimbatore, TN</span></div>
+                <div class="flex justify-between py-1.5"><span class="text-[#F2F2F2] font-semibold">Email:</span> <span
+                        class="text-right text-[#acacac] truncate ml-2">shageenfathima02@...</span></div>
+                <div class="flex justify-between py-1.5"><span class="text-[#F2F2F2] font-semibold">Phone:</span> <span
+                        class="text-right text-[#acacac]">+91 9384793683</span></div>
+            </div>
+
+            <!-- Languages -->
+            <div class="px-5 py-4 border-b border-[#182333] text-[12px]">
+                <h6 class="text-[#F2F2F2] font-bold mb-3">Languages</h6>
+                <div class="flex justify-between items-center mb-1.5">
+                    <span class="text-[#acacac]">Tamil</span>
+                    <span class="text-[#F7A02D] font-bold text-[11px]">Superior</span>
+                </div>
+                <div class="w-full bg-[#060f18] h-1 rounded mb-3">
+                    <div class="bg-[#F7A02D] h-1 rounded w-[95%]"></div>
+                </div>
+
+                <div class="flex justify-between items-center mb-1.5">
+                    <span class="text-[#acacac]">English</span>
+                    <span class="text-[#F7A02D] font-bold text-[11px]">Superior</span>
+                </div>
+                <div class="w-full bg-[#060f18] h-1 rounded mb-3">
+                    <div class="bg-[#F7A02D] h-1 rounded w-[90%]"></div>
+                </div>
+
+                <div class="flex justify-between items-center mb-1.5">
+                    <span class="text-[#acacac]">Hindi</span>
+                    <span class="text-[#F7A02D] font-bold text-[11px]">Intermediate</span>
+                </div>
+                <div class="w-full bg-[#060f18] h-1 rounded">
+                    <div class="bg-[#F7A02D] h-1 rounded w-[60%]"></div>
+                </div>
+            </div>
+
+            <!-- CV Download -->
+            <div class="p-5 pb-6">
+                <a href="Shageen_Fathima_S_Resume (1).pdf" download
+                    class="block w-full py-2.5 bg-[#F7A02D] text-[#060f18] font-bold text-center rounded-lg hover:bg-white transition-colors uppercase tracking-wider text-[12px]">
+                    <i class="fas fa-download mr-2"></i> Download Resume
+                </a>
+            </div>
+        </aside>
+
+        <!-- ================= MAIN BODY ================= -->
+        <main class="flex-1 bg-[#091523] min-w-0 rounded-xl overflow-hidden border border-[#182333]">
+
+            <!-- HERO -->
+            <section id="home" class="min-h-[70vh] p-6 md:p-12 flex items-center relative overflow-hidden">
+                <!-- Background Gradient mimicking reference -->
+                <div class="absolute inset-0 bg-gradient-to-br from-[#182333]/50 to-transparent pointer-events-none">
+                </div>
+
+                <div class="relative z-10 w-full">
+                    <h1 class="text-2xl md:text-4xl font-black text-[#F2F2F2] leading-tight mb-3">
+                        Hello there, <br>
+                        I'm <span class="text-[#F7A02D]">Shageen Fathima</span>, <br>
+                        <span class="text-white">Full-Stack</span> Engineer
+                    </h1>
+
+                    <div class="inline-block mt-2 mb-6">
+                        <p class="text-[#acacac] text-[13px] font-mono typing">
+                            <span class="text-[#F7A02D]">&lt;Code&gt;</span> Think Twice, Test Thrice, Commit Once <span
+                                class="text-[#F7A02D]">&lt;/Code&gt;</span>
+                        </p>
+                    </div>
+
+                    <p class="text-[#acacac] text-sm max-w-2xl leading-relaxed mb-8">
+                        Full-Stack Engineer with 2+ years building production backend systems across fintech, HR-tech,
+                        and enterprise platforms.
+                        Delivered microservices handling financial transactions, bulk data processing, and multi-tenant
+                        workflows using Node.js,
+                        NestJS, FastAPI, PostgreSQL, Kafka, and AWS.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#about"
+                            class="px-5 py-2.5 text-[13px] bg-[#F7A02D] text-[#060f18] font-bold rounded hover:bg-white transition flex items-center gap-2">
+                            Know More <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects"
+                            class="px-5 py-2.5 text-[13px] bg-transparent border-2 border-[#F7A02D] text-[#F7A02D] font-bold rounded hover:bg-[#F7A02D] hover:text-[#060f18] transition flex items-center gap-2">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-[#182333]">
+
+            <!-- ABOUT -->
+            <section id="about" class="p-6 md:p-12">
+                <h2 class="section-title">About Me</h2>
+
+                <div class="grid lg:grid-cols-2 gap-10">
+                    <div class="space-y-4 text-[#acacac] text-sm leading-relaxed">
+                        <p>
+                            I’m a Full-Stack Engineer with a strong focus on backend architecture, distributed systems,
+                            and microservices.
+                            With 2+ years of experience, I specialize in building scalable, secure, and high-performance
+                            applications
+                            across fintech, HR-tech, and enterprise domains.
+                        </p>
+                        <ul class="space-y-3">
+                            <li><i class="fas fa-check text-[#F7A02D] mr-2 text-[12px]"></i> Designing REST APIs and
+                                microservices with Python/FastAPI & Node.js/NestJS.</li>
+                            <li><i class="fas fa-check text-[#F7A02D] mr-2 text-[12px]"></i> Implementing asynchronous
+                                workflows and inter-service communication via Apache Kafka.</li>
+                            <li><i class="fas fa-check text-[#F7A02D] mr-2 text-[12px]"></i> Complex relational database
+                                modeling, transactions, and performance tuning using PostgreSQL.</li>
+                            <li><i class="fas fa-check text-[#F7A02D] mr-2 text-[12px]"></i> Integrating third-party
+                                services including payment gateways (Razorpay, Stripe) and OpenAI.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Education Box mimicking reference style -->
+                    <div class="space-y-6">
+                        <div class="bg-[#182333] p-5 rounded-xl border border-[#060f18] shadow-lg">
+                            <h4 class="text-base font-bold text-[#F2F2F2] mb-3 border-b border-[#060f18] pb-3"><i
+                                    class="fas fa-graduation-cap text-[#F7A02D] mr-2"></i> Education</h4>
+                            <div class="space-y-1 text-[13px]">
+                                <p class="text-[#F7A02D] font-bold text-sm">Government College of Technology, Coimbatore
+                                </p>
+                                <p class="text-[#F2F2F2]">Bachelor of Technology</p>
+                                <p class="text-[#acacac]">CGPA: 8.24 / 10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-[#182333]">
+
+            <!-- RESUME (Work Experience) -->
+            <section id="resume" class="p-6 md:p-12 bg-[#182333]/30">
+                <h2 class="section-title">My Resume</h2>
+
+                <h6 class="text-[#F2F2F2] font-bold text-base mb-6 border-b border-[#182333] pb-3">PROFESSIONAL
+                    EXPERIENCE</h6>
+
+                <div class="bg-[#091523] p-6 rounded-xl border border-[#182333]">
+                    <div class="flex flex-col md:flex-row justify-between mb-4 border-b border-[#182333] pb-4">
+                        <div>
+                            <p class="text-[13px] text-[#acacac]">Company Name: <span
+                                    class="text-[#F7A02D] font-bold">KrishTech Software Solutions</span></p>
+                            <p class="text-[13px] text-[#acacac]">Designation: <span class="text-[#F2F2F2]">Full Stack
+                                    Web Developer</span></p>
+                        </div>
+                        <p class="text-[#F7A02D] font-bold mt-2 md:mt-0 text-[12px] md:text-[13px]">May 2024 – May 2026
+                        </p>
+                    </div>
+
+                    <div class="space-y-2.5 text-[#acacac] leading-relaxed text-[13px]">
+                        <p>• Collaborated with designers and stakeholders to build responsive <strong>Next.js /
+                                React.js</strong> interfaces using <strong>Tailwind CSS</strong>, while handling
+                            frontend, backend, and database development end-to-end.</p>
+                        <p>• Designed and developed REST APIs and microservices using <strong>Node.js, NestJS, and
+                                PostgreSQL</strong>, with <strong>MongoDB</strong> for NoSQL requirements and relational
+                            database schema design.</p>
+                        <p>• Implemented <strong>Apache Kafka</strong> for asynchronous inter-service communication and
+                            <strong>Redis</strong> caching, reducing repetitive database operations by ~40% and
+                            improving average API response time by ~30%.</p>
+                        <p>• Containerized applications using <strong>Docker</strong>, configured <strong>Nginx</strong>
+                            reverse proxy, and managed <strong>AWS-based</strong> deployment and cloud infrastructure
+                            end-to-end.</p>
+                        <p>• Built payment gateway and subscription workflows using <strong>Razorpay</strong> and
+                            <strong>Stripe</strong>, alongside third-party integrations including <strong>GST Fetch
+                                (IRIS), Google OAuth, Twilio, and Puppeteer</strong>.</p>
+                        <p>• Developed PDF parsing and document-processing workflows using <strong>OpenAI</strong> to
+                            process extracted content and generate structured <strong>CSV/Excel</strong> documents.</p>
+                        <p>• Implemented <strong>JWT authentication</strong>, middleware, <strong>role-based access
+                                control (RBAC)</strong>, and protected routes for secure application access.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-[#182333]">
+
+            <!-- SKILLS -->
+            <section id="skills" class="p-6 md:p-12">
+                <h2 class="section-title">Technical Skills</h2>
+
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div
+                        class="bg-[#182333] p-5 rounded-xl border border-[#060f18] hover:border-[#F7A02D] transition duration-300">
+                        <h4 class="font-bold text-base mb-4 text-[#F2F2F2]">Backend & APIs</h4>
+                        <div class="flex flex-wrap gap-2 text-[12px]">
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Node.js</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">NestJS</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Python</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">FastAPI</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">GraphQL</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">REST
+                                APIs</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#182333] p-5 rounded-xl border border-[#060f18] hover:border-[#F7A02D] transition duration-300">
+                        <h4 class="font-bold text-base mb-4 text-[#F2F2F2]">Databases & Architecture</h4>
+                        <div class="flex flex-wrap gap-2 text-[12px]">
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">PostgreSQL</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">MongoDB</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Redis</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Apache
+                                Kafka</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Microservices</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Prisma
+                                / SQLAlchemy</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#182333] p-5 rounded-xl border border-[#060f18] hover:border-[#F7A02D] transition duration-300">
+                        <h4 class="font-bold text-base mb-4 text-[#F2F2F2]">Frontend & Languages</h4>
+                        <div class="flex flex-wrap gap-2 text-[12px]">
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">JavaScript</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">TypeScript</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">React.js</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Next.js</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Tailwind
+                                CSS</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#182333] p-5 rounded-xl border border-[#060f18] hover:border-[#F7A02D] transition duration-300">
+                        <h4 class="font-bold text-base mb-4 text-[#F2F2F2]">Cloud, DevOps & Security</h4>
+                        <div class="flex flex-wrap gap-2 text-[12px]">
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Docker</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">AWS</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Nginx</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">Vercel</span>
+                            <span
+                                class="px-2.5 py-1 bg-[#091523] text-[#acacac] rounded shadow border border-[#060f18]">JWT
+                                / OAuth</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-[#182333]">
+
+            <!-- PORTFOLIO / PROJECTS -->
+            <section id="projects" class="p-6 md:p-12 bg-[#182333]/30">
+                <h2 class="section-title">Portfolio</h2>
+
+                <div class="grid grid-cols-1 gap-5">
+
+                    <!-- Amanah -->
+                    <div
+                        class="bg-[#091523] p-6 rounded-xl border border-[#182333] hover:border-[#F7A02D] transition-colors duration-300 shadow-xl group">
+                        <div class="flex items-center gap-3 mb-4 border-b border-[#182333] pb-3">
+                            <img src="https://amanah.jamylabs.in/favicon.ico?favicon.0-x8aoyncvbjo.ico" alt="Amanah"
+                                class="w-8 h-8 bg-white rounded p-0.5">
+                            <div>
+                                <h4
+                                    class="text-base font-bold text-[#F2F2F2] group-hover:text-[#F7A02D] transition-colors">
+                                    Amanah</h4>
+                                <p class="text-[#F7A02D] text-[12px] mt-0.5">Python • FastAPI • PostgreSQL • Next.js •
+                                    Docker</p>
+                            </div>
+                        </div>
+                        <ul class="text-[#acacac] space-y-2 list-disc pl-4 text-[13px] leading-relaxed mb-5">
+                            <li>Developed and migrated a full-stack Masjid management platform covering Family/Member
+                                Management, Committees, <strong>Sandha Payments</strong>, Finance, Audit Logging, and
+                                Administrative Dashboards.</li>
+                            <li>Designed REST APIs using Python/<strong>FastAPI</strong> with <strong>Controller →
+                                    Service → Repository</strong> architecture, backed by <strong>PostgreSQL</strong>
+                                and <strong>SQLAlchemy</strong>.</li>
+                            <li>Implemented transactional financial workflows connecting Sandha payments with the
+                                central <strong>Transaction Ledger</strong>, ensuring data consistency and integrity.
+                            </li>
+                            <li>Built complex APIs supporting relational queries, filtering, search, cursor pagination,
+                                aggregation, cascading operations, and audit tracking.</li>
+                        </ul>
+                        <a href="https://amanah.jamylabs.in" target="_blank"
+                            class="inline-block px-3 py-1 border border-[#F7A02D] text-[#F7A02D] rounded hover:bg-[#F7A02D] hover:text-[#060f18] transition font-bold text-[12px]">
+                            Live Site
+                        </a>
+                    </div>
+
+                    <!-- TeamLease -->
+                    <div
+                        class="bg-[#091523] p-6 rounded-xl border border-[#182333] hover:border-[#F7A02D] transition-colors duration-300 shadow-xl group">
+                        <div class="flex items-center gap-3 mb-4 border-b border-[#182333] pb-3">
+                            <div>
+                                <h4
+                                    class="text-base font-bold text-[#F2F2F2] group-hover:text-[#F7A02D] transition-colors">
+                                    TeamLease — Background Verification (BGV) Platform</h4>
+                                <p class="text-[#F7A02D] text-[12px] mt-0.5">NestJS • TypeScript • PostgreSQL • Redis •
+                                    Kafka • Keycloak</p>
+                            </div>
+                        </div>
+                        <ul class="text-[#acacac] space-y-2 list-disc pl-4 text-[13px] leading-relaxed">
+                            <li>Developed <strong>multi-tenant</strong> BGV microservices using <strong>NestJS,
+                                    TypeScript, PostgreSQL,</strong> and <strong>TypeORM</strong>, supporting enterprise
+                                onboarding and verification workflows across Business, Corporation, and Client
+                                hierarchies.</li>
+                            <li>Designed REST APIs and distributed service workflows, using <strong>Apache
+                                    Kafka</strong> for inter-service communication across multiple microservices.</li>
+                            <li>Implemented <strong>Redis</strong>-based bulk processing for high-volume BGV uploads
+                                (<strong>5,000+ records per batch</strong>), including validation, processing, and
+                                failure handling — cutting failed-upload retries by <strong>~20%</strong>.</li>
+                            <li>Implemented <strong>Keycloak</strong>-based authentication and role-based authorization,
+                                securing APIs across different operational roles.</li>
+                            <li>Worked on hierarchical configuration, master-switch inheritance, maker-checker approval
+                                workflows, and auditability across tenant and client levels.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Reveal -->
+                    <div
+                        class="bg-[#091523] p-6 rounded-xl border border-[#182333] hover:border-[#F7A02D] transition-colors duration-300 shadow-xl group">
+                        <div class="flex items-center gap-3 mb-4 border-b border-[#182333] pb-3">
+                            <img src="https://reveal.krishub.in/favicon.ico?favicon.4d883956.ico" alt="Reveal"
+                                class="w-8 h-8 bg-white rounded p-0.5">
+                            <div>
+                                <h4
+                                    class="text-base font-bold text-[#F2F2F2] group-hover:text-[#F7A02D] transition-colors">
+                                    Reveal — RFID Scanner-Based Production Management</h4>
+                                <p class="text-[#F7A02D] text-[12px] mt-0.5">Next.js • Tailwind CSS • Node.js • MongoDB
+                                    • Flutter • Bluetooth</p>
+                            </div>
+                        </div>
+                        <ul class="text-[#acacac] space-y-2 list-disc pl-4 text-[13px] leading-relaxed mb-5">
+                            <li>Designed and implemented <strong>Node.js</strong> REST APIs for shipment management,
+                                user management, production tracking, <strong>RFID</strong> tracking, and scan logging.
+                            </li>
+                            <li>Implemented role-based access control (<strong>RBAC</strong>) and protected routes for
+                                Shipper, Consignee, Agent, and Admin workflows.</li>
+                            <li>Designed scalable database schemas and optimized <strong>MongoDB</strong> operations
+                                using aggregation pipelines, indexing, and transactions.</li>
+                            <li>Integrated <strong>RFID</strong> scanners with <strong>Flutter</strong> and
+                                <strong>Bluetooth</strong>, enabling real-time <strong>RFID</strong> tag scanning and
+                                mapping to corresponding shipment boxes.</li>
+                            <li>Developed real-time operational workflows for tracking shipment items,
+                                <strong>RFID</strong> counts, and production status, improving visibility and data
+                                consistency.</li>
+                        </ul>
+                        <a href="https://reveal.krishub.in" target="_blank"
+                            class="inline-block px-3 py-1 border border-[#F7A02D] text-[#F7A02D] rounded hover:bg-[#F7A02D] hover:text-[#060f18] transition font-bold text-[12px]">
+                            Live Site
+                        </a>
+                    </div>
+
+                    <!-- ReNote -->
+                    <div
+                        class="bg-[#091523] p-6 rounded-xl border border-[#182333] hover:border-[#F7A02D] transition-colors duration-300 shadow-xl group">
+                        <div class="flex items-center gap-3 mb-4 border-b border-[#182333] pb-3">
+                            <img src="https://renote.krishub.in/reNote%20logo.png" alt="ReNote"
+                                class="w-8 h-8 bg-white rounded p-0.5 object-contain">
+                            <div>
+                                <h4
+                                    class="text-base font-bold text-[#F2F2F2] group-hover:text-[#F7A02D] transition-colors">
+                                    ReNote</h4>
+                                <p class="text-[#F7A02D] text-[12px] mt-0.5">Next.js • Tailwind • MongoDB</p>
+                            </div>
+                        </div>
+                        <p class="text-[#acacac] text-[13px] leading-relaxed mb-4">
+                            Flexible quotation builder supporting GST handling, product/service modes and printable
+                            PDFs.
+                        </p>
+                        <div class="flex gap-2">
+                            <a href="https://renote.krishub.in" target="_blank"
+                                class="inline-block px-3 py-1 border border-[#F7A02D] text-[#F7A02D] rounded hover:bg-[#F7A02D] hover:text-[#060f18] transition font-bold text-[12px]">Live
+                                Site</a>
+                            <a href="https://renote.krishub.in/auth" target="_blank"
+                                class="inline-block px-3 py-1 border border-[#182333] text-[#F2F2F2] rounded hover:bg-[#182333] transition font-bold text-[12px]">Auth</a>
+                        </div>
+                    </div>
+
+                    <!-- AuthService -->
+                    <div
+                        class="bg-[#091523] p-6 rounded-xl border border-[#182333] hover:border-[#F7A02D] transition-colors duration-300 shadow-xl group">
+                        <div class="flex items-center gap-3 mb-4 border-b border-[#182333] pb-3">
+                            <div>
+                                <h4
+                                    class="text-base font-bold text-[#F2F2F2] group-hover:text-[#F7A02D] transition-colors">
+                                    AuthService</h4>
+                                <p class="text-[#F7A02D] text-[12px] mt-0.5">Nest.js • JWT • OAuth</p>
+                            </div>
+                        </div>
+                        <p class="text-[#acacac] text-[13px] leading-relaxed mb-4">
+                            Centralized authentication service with OTP, role-based access and OAuth integrations.
+                        </p>
+                        <div class="flex gap-2">
+                            <a href="https://renote.krishub.in/auth" target="_blank"
+                                class="inline-block px-3 py-1 border border-[#F7A02D] text-[#F7A02D] rounded hover:bg-[#F7A02D] hover:text-[#060f18] transition font-bold text-[12px]">Live
+                                Site</a>
+                            <a href="https://github.com/Shageen376" target="_blank"
+                                class="inline-block px-3 py-1 border border-[#182333] text-[#F2F2F2] rounded hover:bg-[#182333] transition font-bold text-[12px]">GitHub</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <hr class="border-[#182333]">
+
+            <!-- CERTIFICATIONS -->
+            <section id="certifications" class="p-6 md:p-12">
+                <h2 class="section-title">Certifications</h2>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div
+                        class="bg-[#182333] p-5 rounded-xl border border-[#060f18] hover:border-[#F7A02D] transition duration-300">
+                        <h4 class="text-base font-bold text-[#F2F2F2]">KGISL</h4>
+                        <p class="text-[#F7A02D] font-semibold text-[12px] mt-0.5">Software Trainee / Technical Trainer
+                        </p>
+                        <p class="mt-2 text-[#acacac] leading-relaxed text-[13px]">
+                            Conducted a 10-day MERN Stack training program covering MongoDB, Express.js, React.js,
+                            Node.js, REST APIs, and database integration.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#182333] p-5 rounded-xl border border-[#060f18] hover:border-[#F7A02D] transition duration-300">
+                        <h4 class="text-base font-bold text-[#F2F2F2]">Skyappz Academy</h4>
+                        <p class="text-[#F7A02D] font-semibold text-[12px] mt-0.5">Full Stack Web Development Intern</p>
+                        <p class="mt-2 text-[#acacac] leading-relaxed text-[13px]">
+                            Practical exposure to building full stack applications using React.js and MongoDB.
+                        </p>
+                    </div>
+
+                    <div
+                        class="bg-[#182333] p-5 rounded-xl border border-[#060f18] hover:border-[#F7A02D] transition duration-300">
+                        <h4 class="text-base font-bold text-[#F2F2F2]">NCC 'B' & 'C' Certificates</h4>
+                        <p class="text-[#F7A02D] font-semibold text-[12px] mt-0.5">National Cadet Corps</p>
+                        <p class="mt-2 text-[#acacac] leading-relaxed text-[13px]">
+                            Leadership, discipline, teamwork, and organizational training.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-[#182333]">
+
+            <!-- CONTACT -->
+            <section id="contact" class="p-6 md:p-12 bg-gradient-to-t from-[#182333]/50 to-transparent">
+                <div class="max-w-3xl">
+                    <h2 class="section-title">Get in Touch</h2>
+
+                    <p class="mt-3 text-[#acacac] leading-relaxed text-sm mb-6">
+                        If you like my work or have a project, let's connect.
+                    </p>
+
+                    <div
+                        class="space-y-4 text-[#acacac] text-sm bg-[#091523] p-5 md:p-6 rounded-xl border border-[#182333] shadow-lg">
+                        <p class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-[#F7A02D] text-lg w-5"></i>
+                            <span>shageenfathima02@gmail.com</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fas fa-phone text-[#F7A02D] text-lg w-5"></i>
+                            <span>+91 9384793683</span>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-[#F7A02D] text-lg w-5"></i>
+                            <span>Coimbatore, Tamil Nadu</span>
+                        </p>
+                    </div>
+
+                    <div class="mt-6 flex gap-3">
+                        <a href="https://github.com/Shageen376" target="_blank"
+                            class="px-5 py-2 rounded border border-[#F7A02D] text-[#F7A02D] font-bold hover:bg-[#F7A02D] hover:text-[#060f18] transition flex items-center gap-2 text-[13px]">
+                            <i class="fab fa-github text-base"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/shageen-fathima" target="_blank"
+                            class="px-5 py-2 rounded border border-[#F7A02D] text-[#F7A02D] font-bold hover:bg-[#F7A02D] hover:text-[#060f18] transition flex items-center gap-2 text-[13px]">
+                            <i class="fab fa-linkedin text-base"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="py-5 text-center text-[#acacac] border-t border-[#182333] bg-[#060f18] text-[12px]">
+                © 2026 — Shageen Fathima S
+            </footer>
+
+        </main>
+
+        <!-- ================= RIGHT NAV ================= -->
+        <nav
+            class="hidden xl:flex w-[60px] shrink-0 bg-[#091523] h-[calc(100vh-3rem)] sticky top-6 rounded-xl flex-col items-center py-4 border border-[#182333]">
+            <div class="w-full bg-[#182333] py-4 text-center text-lg text-[#F2F2F2] mb-8 border-y border-[#060f18]">
+                <i class="fas fa-bars cursor-pointer hover:text-[#F7A02D] transition"></i>
+            </div>
+
+            <div class="flex flex-col gap-6 text-lg text-[#acacac] flex-1">
+                <a href="#home" class="relative group hover:text-[#F7A02D] transition">
+                    <i class="fas fa-home"></i>
+                    <span
+                        class="absolute right-[200%] top-1/2 -translate-y-1/2 bg-[#F7A02D] text-[#060f18] text-[10px] font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">HOME</span>
+                </a>
+                <a href="#about" class="relative group hover:text-[#F7A02D] transition">
+                    <i class="fas fa-user"></i>
+                    <span
+                        class="absolute right-[200%] top-1/2 -translate-y-1/2 bg-[#F7A02D] text-[#060f18] text-[10px] font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">ABOUT</span>
+                </a>
+                <a href="#resume" class="relative group hover:text-[#F7A02D] transition">
+                    <i class="fas fa-file-alt"></i>
+                    <span
+                        class="absolute right-[200%] top-1/2 -translate-y-1/2 bg-[#F7A02D] text-[#060f18] text-[10px] font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">RESUME</span>
+                </a>
+                <a href="#projects" class="relative group hover:text-[#F7A02D] transition">
+                    <i class="fas fa-laptop-code"></i>
+                    <span
+                        class="absolute right-[200%] top-1/2 -translate-y-1/2 bg-[#F7A02D] text-[#060f18] text-[10px] font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">PORTFOLIO</span>
+                </a>
+                <a href="#contact" class="relative group hover:text-[#F7A02D] transition">
+                    <i class="fas fa-address-card"></i>
+                    <span
+                        class="absolute right-[200%] top-1/2 -translate-y-1/2 bg-[#F7A02D] text-[#060f18] text-[10px] font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">CONTACT</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        // Simple mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const nav = document.getElementById('mobile-nav');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.add('hidden');
+                nav.classList.remove('flex');
+            });
+        });
+    </script>
 </body>
 
 </html>
